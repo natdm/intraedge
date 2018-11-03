@@ -1,0 +1,40 @@
+Golang Training
+at Intraedge
+
+* About Go
+
+.image /images/gopher.png
+
+* What is Go
+- Strictly typed
+- General purpose
+- Focuses on simplicity
+- Lower level/Systems Programming
+- Procedural, not OO or FP
+- Compiles to a binary
+
+* What makes it different
+- Simplicity
+- Concurrency Primitives
+- No Generics (yet)
+- Implicit interfaces
+
+* Why is Go a thing? (goals)
+- Less breaking changes
+- Created in detest of C++
+- Easy as Java to write (.. ish)
+- Fast as C to run (.. ish)
+
+* Core ideologies
+- Strong stdlib helps make it a strong language 
+- Strongly opinionated community
+- Designed to be unambiguous
+- Don't communicate by sharing memory, share memory by communicating
+- Handle your errors, don't catch them
+- Clear and *concise*
+
+* Weakspots
+- No interfaces (yet), is it really a weakness?
+- Simple language means complex applications and tedious code
+- Tooling/libs are still new (.. ish)
+- Systems Programming language + GC??

@@ -1,0 +1,42 @@
+Concurrency in Go
+
+* Concurrency is not parallelism
+- Parallelism is doing multiple things at once
+- Concurrency is coordinating multiple things happening at once
+
+.link https://www.youtube.com/watch?v=cN_DpYBzKso Rob Pike on this
+* Parallelism
+- Doing the same thing multiple times, multiple threads, multiple pieces of data
+- Simultaneous execution of possibly related things.
+- Dealing with a lot of things at once
+Eg: "I have one thing to do, let's run it on multiple processors to speed it up." -- it gets slower.
+.image ./images/parallelism.png
+
+* Concurrency
+- Doing the same thing in a coordinated effort, spanning multiple threads
+- Composition of independently executing 'things' - Pike
+- Doing a lot of things at once
+.image ./images/concurrency.jpg
+
+* Goroutines
+Lightweight threads managed by the runtime.
+
+.play ./code/goroutines/1/goroutines.go
+
+* Inline Goroutines
+.play ./code/goroutines/2/goroutines.go /START OMIT/,/END OMIT/
+
+* Channels help coordination
+.play ./code/channels/1/channels.go
+
+* Channel types
+.code ./code/channels/1/channels_types.go
+
+* Channels to communicate
+.play ./code/channels/2/channels.go /START OMIT/,/END OMIT/
+
+* Select
+.play ./code/channels/5/select.go  /START OMIT/,/END OMIT/
+
+* Waitgroups
+.play ./code/channels/4/waitgroups.go 

@@ -40,3 +40,26 @@ Lightweight threads managed by the runtime.
 
 * Waitgroups
 .play ./code/channels/4/waitgroups.go 
+
+* Race Conditions
+Race conditions are the result of multiple threads accessing a single piece
+of data at the same time, a result of lack of coordination.
+.code ./code/goroutines/3/race.go /START RACE/,/END RACE/
+
+* Race Conditions (Fixed with channels)
+Use a channel to serialize access
+.code ./code/goroutines/3/race.go /START RACEFIX1/,/END RACEFIX1/
+
+* Race Conditions (Fixed with a mutex)
+Use a mutext to serialize access
+.code ./code/goroutines/3/race.go /START RACEFIX2/,/END RACEFIX2/
+
+* Use the right tool
+Channels are fun, but they're not always the right tool for the job
+- *sync.Locker* (sync.Mutex/sync.RWMutex)
+- *sync.Map* (concurrent access map of type map[interface]interface)
+- *sync.WaitGroup* to controll counts
+- *sync.Cond* implements a condition variable, a rendezvous point for goroutines waiting for or announcing the occurrence of an event
+- *atomic* package for low level operations of + and -
+- *context.Context* for cancellation
+- Third party packages

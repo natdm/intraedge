@@ -1,0 +1,37 @@
+Go Training
+Interfaces
+5 Nov 2018
+
+Nathan Hyland
+Intraedge
+
+* Interfaces describe behavior
+- Implicitly met, no `extends` or `implements`
+- Smaller interfaces are accomplished with ease
+- Larger interfaces are not accomplished ever.
+.code ./code/interfaces/1/interfaces.go  /START OMIT/,/END OMIT/
+
+* Example with file
+.play ./code/interfaces/2/interfaces.go  /START FILE OMIT/,/END FILE OMIT/
+Could be improved
+
+* Reader interface
+.code ./code/interfaces/3/interfaces.go  /START READER OMIT/,/END READER OMIT/
+
+* File implements Reader
+type File has a Read(b []byte) (int error) method, therefor it can be used
+.code ./code/interfaces/3/interfaces.go  /START FILEREADFN OMIT/,/END FILEREADFN OMIT/
+
+* ReadAll utility function
+Readall takes any type that has a Read(b []byte) (int, error) method and calls it until EOF is hit
+
+.code ./code/interfaces/3/interfaces.go  /START READALL OMIT/,/END READALL OMIT/
+
+* Change lineCt to need only the function it calls, Read
+- Before: lineCt(f *os.File) (int, error)
+- After: lineCt(r io.Reader) (int, error)
+
+.play ./code/interfaces/3/interfaces.go  /START FILEREAD OMIT/,/END FILEREAD OMIT/
+
+* Use it for other readers
+.play ./code/interfaces/4/interfaces.go  /START SERVERREAD OMIT/,/END SERVERREAD OMIT/

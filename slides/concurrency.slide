@@ -1,4 +1,9 @@
-Concurrency in Go
+Go Training
+Concurrency
+5 Nov 2018
+
+Nathan Hyland
+Intraedge
 
 * Concurrency is not parallelism
 - Parallelism is doing multiple things at once
@@ -44,15 +49,15 @@ Lightweight threads managed by the runtime.
 * Race Conditions
 Race conditions are the result of multiple threads accessing a single piece
 of data at the same time, a result of lack of coordination.
-.code ./code/goroutines/3/race.go /START RACE/,/END RACE/
+.code ./code/goroutines/3/race.go /START RACE OMIT/,/END RACE OMIT/
 
 * Race Conditions (Fixed with channels)
 Use a channel to serialize access
-.code ./code/goroutines/3/race.go /START RACEFIX1/,/END RACEFIX1/
+.code ./code/goroutines/3/race.go /START RACEFIX1 OMIT/,/END RACEFIX1 OMIT/
 
 * Race Conditions (Fixed with a mutex)
 Use a mutext to serialize access
-.code ./code/goroutines/3/race.go /START RACEFIX2/,/END RACEFIX2/
+.code ./code/goroutines/3/race.go /START RACEFIX2 OMIT/,/END RACEFIX2 OMIT/
 
 * Use the right tool
 Channels are fun, but they're not always the right tool for the job
@@ -61,5 +66,5 @@ Channels are fun, but they're not always the right tool for the job
 - *sync.WaitGroup* to controll counts
 - *sync.Cond* implements a condition variable, a rendezvous point for goroutines waiting for or announcing the occurrence of an event
 - *atomic* package for low level operations of + and -
-- *context.Context* for cancellation
+- *context.Context* for cancellation even though it's controversial
 - Third party packages

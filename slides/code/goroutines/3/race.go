@@ -9,7 +9,7 @@ func main() {
 
 }
 
-// START RACE
+// START RACE OMIT
 func hasRace() {
 	m := make(map[string]bool)
 	wg := &sync.WaitGroup{}
@@ -26,9 +26,9 @@ func hasRace() {
 	log.Println("done")
 }
 
-// END RACE
+// END RACE OMIT
 
-// START RACEFIX1
+// START RACEFIX1 OMIT
 func fixRace1() {
 	m := make(map[string]bool)
 	done := make(chan struct{})
@@ -51,9 +51,9 @@ func fixRace1() {
 	log.Println("done")
 }
 
-// END RACEFIX1
+// END RACEFIX1 OMIT
 
-// START RACEFIX2
+// START RACEFIX2 OMIT
 func fixRace2() {
 	m := make(map[string]bool)
 	wg := &sync.WaitGroup{}
@@ -73,4 +73,4 @@ func fixRace2() {
 	log.Println("done")
 }
 
-// END RACEFIX2
+// END RACEFIX2 OMIT

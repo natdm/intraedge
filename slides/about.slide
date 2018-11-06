@@ -5,6 +5,13 @@ Introduction to Go
 Nathan Hyland
 Intraedge
 
+* Before we start
+- Nav to https://golang.org/doc/install and install the latest for your OS. 
+- If already installed, run `go version` in your CLI to ensure you have 1.11+
+- Ensure you have the addon in your IDE for go that has the most stars/upvotes/likes/whatever
+
+If you don't want to work with Eclipse and getting the GoClipse addon, use VSCode with the Go plugin. 
+
 * About Me
 - Software developer for 3+yrs
 - Project Manager previously
@@ -23,6 +30,16 @@ Intraedge
 - Lower level/Systems Programming
 - Procedural, not OO or FP
 - Compiles to a binary
+
+* About the "not OOP" thing
+Go FAQ:
+
+_Is_ _Go_ _an_ _object-oriented_ _language?_
+
+Yes and no. Although Go has types and methods and allows an object-oriented style of programming, there is no type hierarchy. The concept of “interface” in Go provides a different approach that we believe is easy to use and in some ways more general. There are also ways to embed types in other types to provide something analogous—but not identical—to subclassing. Moreover, methods in Go are more general than in C++ or Java: they can be defined for any sort of data, even built-in types such as plain, “unboxed” integers. They are not restricted to structs (classes).
+
+Also, the lack of a type hierarchy makes “objects” in Go feel much more lightweight than in languages such as C++ or Java.
+
 
 * What makes it different
 - Simplicity

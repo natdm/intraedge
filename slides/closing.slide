@@ -1,0 +1,21 @@
+Go Training
+In Closing
+5 Nov 2018
+
+* Things we didn't really cover
+- Atomic
+- Other concurrency patterns
+- Better package structure
+- Dependency management
+- Wider range of stdlib packages
+- Really good testing
+
+* Links
+I will get your emails and forward you this repo
+
+.link https://golang.org/doc/faq Go FAQ
+.link https://blog.golang.org/ Go blog
+.link https://dave.cheney.net/ Dave Cheney
+.link https://www.youtube.com/watch?v=cN_DpYBzKso Concurrency by Rob Pike
+.link https://www.youtube.com/watch?v=HxaD_trXwRE Lexical Scanning
+.link https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw Just For Func

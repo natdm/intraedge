@@ -9,8 +9,9 @@ import (
 func main() {
 	wg := &sync.WaitGroup{}
 
-	for i := 0; i < 10; i++ {
-		wg.Add(1)
+	ct := 10
+	wg.Add(ct)
+	for i := 0; i < ct; i++ {
 		// pass in 'i' so it's not caught by for loop
 		go func(i int) {
 			time.Sleep(time.Second)
